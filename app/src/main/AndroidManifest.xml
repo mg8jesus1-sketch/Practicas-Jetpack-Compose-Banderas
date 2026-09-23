@@ -44,6 +44,13 @@
             android:exported="true"
             android:label="Bandera de España"
             android:theme="@style/Theme.Banderas" />
+        <activity
+            android:name=".Screen.Bandera_Colombia"
+            android:exported="true"
+            android:label="Bandera de Colombia"
+            android:theme="@style/Theme.Banderas" />
     </application>
+
+
 
 </manifest>
