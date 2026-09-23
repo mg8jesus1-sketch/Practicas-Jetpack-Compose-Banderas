@@ -16,7 +16,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
 class Bandera_Italia : ComponentActivity() {
@@ -42,19 +43,19 @@ class Bandera_Italia : ComponentActivity() {
                                 modifier = Modifier
                                     .fillMaxHeight()
                                     .weight(1f)
-                                    .background(Color(0xFF009246))
+                                    .background(colorResource(id = R.color.verde))
                             ) { }
                             Column(
                                 modifier = Modifier
                                     .fillMaxHeight()
                                     .weight(1f)
-                                    .background(Color.White)
+                                    .background(colorResource(id = R.color.white))
                             ) { }
                             Column(
                                 modifier = Modifier
                                     .fillMaxHeight()
                                     .weight(1f)
-                                    .background(Color(0xFFCE2B37))
+                                    .background(colorResource(id = R.color.rojo))
                             ) { }
                         }
                     }
