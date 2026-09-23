@@ -15,7 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -39,13 +39,13 @@ fun BanderaScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .fillMaxHeight()
                     .weight(1f)
-                    .background(Color(0xFF006341))
+                    .background(colorResource(id = R.color.Verde))
             ) { }
             Column(
                 modifier = Modifier
                     .fillMaxHeight()
                     .weight(1f)
-                    .background(Color.White),
+                    .background(colorResource(id = R.color.white)),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
@@ -59,7 +59,7 @@ fun BanderaScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .fillMaxHeight()
                     .weight(1f)
-                    .background(Color(0xFFCE1126))
+                    .background(colorResource(id = R.color.Rojo))
             ) { }
         }
     }
