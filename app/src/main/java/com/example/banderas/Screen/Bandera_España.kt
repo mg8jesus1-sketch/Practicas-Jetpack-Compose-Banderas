@@ -16,7 +16,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.banderas.R
@@ -45,28 +45,28 @@ class Bandera_España : ComponentActivity() {
                                 modifier = Modifier
                                     .weight(1f)
                                     .fillMaxWidth()
-                                    .background(Color(0xFFAA151B))
+                                    .background(colorResource(id = R.color.rojo))
                             )
                             Box(
                                 modifier = Modifier
                                     .weight(2f)
                                     .fillMaxWidth()
-                                    .background(Color(0xFFF1BF00))
+                                    .background(colorResource(id = R.color.amarillo))
                             ) {
                                 Image(
                                     painter = painterResource(id = R.drawable.espana),
                                     contentDescription = "Escudo de España",
                                     modifier = Modifier
                                         .align(Alignment.CenterStart)
-                                        .padding(start = 24.dp)
-                                        .size(80.dp)
+                                        .padding(start = 34.dp)
+                                        .size(100.dp)
                                 )
                             }
                             Box(
                                 modifier = Modifier
                                     .weight(1f)
                                     .fillMaxWidth()
-                                    .background(Color(0xFFAA151B))
+                                    .background(colorResource(id = R.color.rojo))
                             )
                         }
                     }
