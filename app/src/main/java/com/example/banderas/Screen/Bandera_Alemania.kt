@@ -16,7 +16,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
 class Bandera_Alemania : ComponentActivity() {
@@ -32,28 +33,28 @@ class Bandera_Alemania : ComponentActivity() {
                             .fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
-                        Row(
+                        Column(
                             modifier = Modifier
                                 .fillMaxWidth(0.9f)
                                 .aspectRatio(3f / 2f)
                         ) {
-                            Column(
+                            Row(
                                 modifier = Modifier
-                                    .fillMaxHeight()
+                                    .fillMaxWidth()
                                     .weight(1f)
-                                    .background(Color.Black)
+                                    .background(colorResource(id = R.color.black))
                             ) { }
-                            Column(
+                            Row(
                                 modifier = Modifier
-                                    .fillMaxHeight()
+                                    .fillMaxWidth()
                                     .weight(1f)
-                                    .background(Color(0xFFDD0000))
+                                    .background(colorResource(id = R.color.rojo))
                             ) { }
-                            Column(
+                            Row(
                                 modifier = Modifier
-                                    .fillMaxHeight()
+                                    .fillMaxWidth()
                                     .weight(1f)
-                                    .background(Color(0xFFFFCE00))
+                                    .background(colorResource(id = R.color.amarillo))
                             ) { }
                         }
                     }
