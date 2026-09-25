@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Path
@@ -22,37 +23,46 @@ fun BanderaEEUU(modifier: Modifier = Modifier) {
     val azul = colorResource(id = R.color.azul)
     val blanco = colorResource(id = R.color.blanco)
 
-    Box(modifier = modifier.fillMaxSize()) {
-        Column(Modifier.fillMaxSize()) {
-            repeat(13) { index ->
-                Box(
-                    Modifier
-                        .weight(1f)
-                        .fillMaxWidth()
-                        .background(if (index % 2 == 0) rojo else blanco)
-                )
-            }
-        }
-
+    Box(
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
         Box(
             modifier = Modifier
-                .fillMaxWidth(0.4f)
-                .fillMaxHeight(0.54f)
-                .background(azul)
+                .fillMaxWidth(0.9f)
+                .aspectRatio(3f / 2f)
         ) {
-            Canvas(modifier = Modifier.fillMaxSize()) {
-                val cols = 6
-                val rows = 5
-                val starRadius = size.minDimension / (cols * 2.2f)
+            Column(Modifier.fillMaxSize()) {
+                repeat(13) { index ->
+                    Box(
+                        Modifier
+                            .weight(1f)
+                            .fillMaxWidth()
+                            .background(if (index % 2 == 0) rojo else blanco)
+                    )
+                }
+            }
 
-                for (row in 0 until rows) {
-                    val starsInRow = if (row % 2 == 0) cols else cols - 1
-                    val offsetX = if (row % 2 == 0) 0f else (size.width / cols) / 2f
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(0.4f)
+                    .fillMaxHeight(0.54f)
+                    .background(azul)
+            ) {
+                Canvas(modifier = Modifier.fillMaxSize()) {
+                    val cols = 6
+                    val rows = 9
+                    val starRadius = size.minDimension / (rows * 2.2f)
 
-                    for (col in 0 until starsInRow) {
-                        val cx = offsetX + (size.width / cols) * col + (size.width / cols) / 2f
-                        val cy = (size.height / rows) * row + (size.height / rows) / 2f
-                        drawStar(center = Offset(cx, cy), radius = starRadius, color = blanco)
+                    for (row in 0 until rows) {
+                        val starsInRow = if (row % 2 == 0) cols else cols - 1
+                        val offsetX = if (row % 2 == 0) 0f else (size.width / cols) / 2f
+
+                        for (col in 0 until starsInRow) {
+                            val cx = offsetX + (size.width / cols) * col + (size.width / cols) / 2f
+                            val cy = (size.height / rows) * row + (size.height / rows) / 2f
+                            drawStar(center = Offset(cx, cy), radius = starRadius, color = blanco)
+                        }
                     }
                 }
             }
