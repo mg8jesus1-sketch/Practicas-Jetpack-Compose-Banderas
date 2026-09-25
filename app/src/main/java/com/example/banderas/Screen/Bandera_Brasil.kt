@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,13 +16,15 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
-class Bandera_España : ComponentActivity() {
+class Bandera_Brasil : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -36,37 +38,35 @@ class Bandera_España : ComponentActivity() {
                             .fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
-                        Column(
+                        val verde = colorResource(id = R.color.verde_bandera)
+                        val amarillo = colorResource(id = R.color.amarillo_bandera)
+
+                        Box(
                             modifier = Modifier
                                 .fillMaxWidth(0.9f)
                                 .aspectRatio(3f / 2f)
+                                .background(verde)
                         ) {
-                            Box(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .fillMaxWidth()
-                                    .background(Color(0xFFAA151B))
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .weight(2f)
-                                    .fillMaxWidth()
-                                    .background(Color(0xFFF1BF00))
-                            ) {
-                                Image(
-                                    painter = painterResource(id = R.drawable.espana),
-                                    contentDescription = "Escudo de España",
-                                    modifier = Modifier
-                                        .align(Alignment.CenterStart)
-                                        .padding(start = 24.dp)
-                                        .size(80.dp)
-                                )
+                            Canvas(modifier = Modifier.fillMaxSize()) {
+                                val w = size.width
+                                val h = size.height
+
+                                val diamond = Path().apply {
+                                    moveTo(w / 2f, h * 0.08f)   // arriba
+                                    lineTo(w * 0.92f, h / 2f)   // derecha
+                                    lineTo(w / 2f, h * 0.92f)   // abajo
+                                    lineTo(w * 0.08f, h / 2f)   // izquierda
+                                    close()
+                                }
+                                drawPath(path = diamond, color = amarillo)
                             }
-                            Box(
+
+                            Image(
+                                painter = painterResource(id = R.drawable.brasil),
+                                contentDescription = "Globo con estrellas",
                                 modifier = Modifier
-                                    .weight(1f)
-                                    .fillMaxWidth()
-                                    .background(Color(0xFFAA151B))
+                                    .align(Alignment.Center)
+                                    .size(340.dp)
                             )
                         }
                     }
