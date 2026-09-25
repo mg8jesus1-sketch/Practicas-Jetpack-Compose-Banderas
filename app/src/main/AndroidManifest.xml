@@ -25,24 +25,9 @@
         </activity>
 
         <activity
-            android:name=".Screen.Bandera_Francia"
+            android:name=".Screen.Bandera_Chile"
             android:exported="true"
-            android:label="Bandera de Francia"
-            android:theme="@style/Theme.Banderas" />
-        <activity
-            android:name=".Screen.Bandera_Italia"
-            android:exported="true"
-            android:label="Bandera de Italia"
-            android:theme="@style/Theme.Banderas" />
-        <activity
-            android:name=".Screen.Bandera_Alemania"
-            android:exported="true"
-            android:label="Bandera de Alemania"
-            android:theme="@style/Theme.Banderas" />
-        <activity
-            android:name=".Screen.Bandera_España"
-            android:exported="true"
-            android:label="Bandera de España"
+            android:label="Bandera de Chile"
             android:theme="@style/Theme.Banderas" />
     </application>
 

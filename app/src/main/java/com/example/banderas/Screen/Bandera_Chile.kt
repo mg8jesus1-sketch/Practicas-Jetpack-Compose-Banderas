@@ -1,4 +1,4 @@
-package com.example.banderascompose
+package com.example.banderas.Screen
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.banderascompose.R
+import com.example.banderas.R
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
@@ -33,7 +33,6 @@ fun BanderaChile(modifier: Modifier = Modifier) {
                 .aspectRatio(3f / 2f)
         ) {
             Column(modifier = Modifier.fillMaxSize()) {
-                // Franja superior: blanco con cantón azul
                 Box(
                     modifier = Modifier
                         .weight(1f)
@@ -58,7 +57,6 @@ fun BanderaChile(modifier: Modifier = Modifier) {
                     }
                 }
 
-                // Franja inferior: roja
                 Box(
                     modifier = Modifier
                         .weight(1f)
