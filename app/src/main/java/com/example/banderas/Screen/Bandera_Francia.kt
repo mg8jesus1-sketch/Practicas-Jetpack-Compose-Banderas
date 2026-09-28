@@ -16,7 +16,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
 class Bandera_Francia : ComponentActivity() {
@@ -41,19 +42,19 @@ class Bandera_Francia : ComponentActivity() {
                                 modifier = Modifier
                                     .fillMaxHeight()
                                     .weight(1f)
-                                    .background(Color(0xFF0055A4))
+                                    .background(colorResource(R.color.azul_francia))
                             ) { }
                             Column(
                                 modifier = Modifier
                                     .fillMaxHeight()
                                     .weight(1f)
-                                    .background(Color.White)
+                                    .background(colorResource(R.color.blanco_francia))
                             ) { }
                             Column(
                                 modifier = Modifier
                                     .fillMaxHeight()
                                     .weight(1f)
-                                    .background(Color(0xFFEF4135))
+                                    .background(colorResource(R.color.rojo_francia))
                             ) { }
                         }
                     }
