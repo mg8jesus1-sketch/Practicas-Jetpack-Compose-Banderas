@@ -55,8 +55,8 @@ fun BanderaIsrael(modifier: Modifier = Modifier) {
         val cy = h / 2f
         val r = h * 0.19f
         val trazo = Stroke(width = h * 0.03f, join = StrokeJoin.Miter)
-        drawPath(trianglePath(cx, cy, r, -90f), color = azul, style = trazo) // apunta arriba
-        drawPath(trianglePath(cx, cy, r, 90f), color = azul, style = trazo)  // apunta abajo
+        drawPath(trianglePath(cx, cy, r, -90f), color = azul, style = trazo)
+        drawPath(trianglePath(cx, cy, r, 90f), color = azul, style = trazo)
     }
 }
 
