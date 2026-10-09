@@ -47,5 +47,5 @@ fun BanderaReinoUnido(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun BanderaReinoUnidoPreview() {
-    Surface { BanderaReinoUnidoPreview() }
+    Surface { BanderaReinoUnido() }
 }
