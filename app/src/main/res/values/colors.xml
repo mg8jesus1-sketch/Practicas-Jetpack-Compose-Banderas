@@ -2,7 +2,10 @@
 <resources>
 
     <color name="blanco">#FFFFFFFF</color>
-    <color name="carmesi">#FF0000</color>
+    <color name="rojo">#FF0000</color>
     <color name="azul">#0016A9</color>
+    <color name="verde">#4CAF50</color>
+    <color name="dorado">#FF9800</color>
+    <color name="negro">#000000</color>
 
 </resources>
