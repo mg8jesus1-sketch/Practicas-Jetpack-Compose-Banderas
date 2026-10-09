@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <color name="amarillo">#FFEB3B</color>
     <color name="blanco">#FFFFFFFF</color>
-    <color name="carmesi">#FF0000</color>
+    <color name="rojo">#FF0000</color>
     <color name="azul">#0016A9</color>
 
 </resources>
